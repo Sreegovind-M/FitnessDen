@@ -1,0 +1,156 @@
+.challenge-section {
+  background-color: black;
+}
+
+.challenge-bg-img {
+  position: relative;
+  top: -20vh;
+}
+
+.challenge-bg-img img {
+  width: 100%;
+  height: 90vh;
+}
+
+.challenge-header {
+  position: relative;
+  top: 5vh;
+  z-index: 999;
+  color: white;
+  font-size: 6vh;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 85px;
+  letter-spacing: -0.06em;
+}
+.challenge-header span {
+  color: #ff5300;
+}
+
+.challenge-header button {
+  background-color: #fb5607;
+  color: white;
+  outline: 0;
+  border: 0;
+  border-radius: 100px;
+  padding: 2vh 4vh;
+  font-weight: 700;
+  font-size: 3vh;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.challenge-header button:hover {
+  background-color: white;
+  color: #fb5607;
+}
+
+.challenge-hero-section {
+  background-color: black;
+}
+
+/* Challenges box section  */
+
+.challenges-box-header {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.challenges-box-header h1 {
+  font-size: 6vh;
+  margin-bottom: 10px;
+  color: white;
+}
+.challenges-box-header span {
+  color: #fb5607;
+  font-size: 3vh;
+}
+
+.challenges-boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5vh 0;
+  background-color: black;
+}
+
+/* ChallengeCard.css */
+.challenge-card {
+  border: 1px solid #fb5607;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  margin: 10px;
+  background-color: #cccccc;
+}
+
+.challenge-card:hover {
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.challenge-card-content {
+  padding: 20px;
+}
+
+.challenge-card-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.challenge-card-content h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #fb5607;
+}
+
+.challenge-card-content p {
+  font-size: 1em;
+  color: #666;
+  margin: 10px 0;
+}
+
+.challenge-card-content button {
+  background-color: #fb5607;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.challenge-card-content button:hover {
+  background-color: #e04e06;
+}
+
+@media (max-width: 800px) and (min-width: 598px) {
+  .challenge-header {
+    font-size: 4vh;
+  }
+  .challenge-bg-img img {
+    height: 100%;
+  }
+}
+
+@media (max-width: 599px) {
+  /* Hero section  */
+  .challenge-header {
+    font-size: 3vh;
+    top: 10vh;
+  }
+  .hero-title button {
+    margin: 25px;
+    padding: 2vh;
+    font-size: 2vh;
+  }
+  .challenge-bg-img img {
+    height: 100%;
+  }
+}

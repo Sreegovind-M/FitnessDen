@@ -1,0 +1,129 @@
+:root {
+  --orange: #fb5607;
+  --black: #0f0f0f;
+  --dark-gray: #303030;
+  --light-gray: #cccccc;
+}
+
+.nutrition-fact {
+  font-family: Arial, sans-serif;
+  color: var(--light-gray);
+  background-color: var(--black);
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: var(--dark-gray);
+  color: var(--orange);
+  text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.search-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-section input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid var(--dark-gray);
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.food-facts-section {
+  background-color: var(--black);
+  color: var(--light-gray);
+  padding: 40px 20px;
+}
+
+.food-facts-section h2 {
+  font-size: 2.2em;
+  color: var(--orange);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.food-facts-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.food-fact-card {
+  background-color: var(--dark-gray);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease;
+  border: 2px solid var(--dark-gray); /* Add border to the card */
+}
+
+.food-fact-card img {
+  width: 100%;
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+.food-fact-card h3 {
+  font-size: 1.5em;
+  color: var(--orange);
+  padding: 10px;
+  text-align: center;
+}
+
+.food-fact-card p {
+  font-size: 1em;
+  color: var(--light-gray);
+  padding: 0 10px 10px;
+  text-align: center;
+}
+
+.food-fact-card:hover {
+  transform: scale(1.05);
+}
+
+.no-results {
+  text-align: center;
+  color: var(--light-gray);
+  font-size: 1.2em;
+  padding: 20px;
+}
+
+.footer {
+  /* background-color: var(--black); */
+  color: var(--light-gray);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .food-fact-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .food-facts-section h2 {
+    font-size: 1.8em;
+  }
+
+  .food-fact-card h3 {
+    font-size: 1.3em;
+  }
+
+  .food-fact-card p {
+    font-size: 0.9em;
+  }
+}

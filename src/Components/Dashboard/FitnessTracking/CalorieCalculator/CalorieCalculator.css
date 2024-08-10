@@ -1,0 +1,86 @@
+/* Interactive Section - Calorie Calculator */
+.interactive-section {
+  padding: 40px 20px;
+  color: #cccccc; /* Light Gray */
+  text-align: center;
+}
+
+.interactive-section h2 {
+  font-size: 2.5em;
+  color: #fb5607; /* Orange */
+  margin-bottom: 20px;
+}
+
+.interactive-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.interactive-section .calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interactive-section form {
+  background-color: #303030; /* Dark Gray */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.interactive-section input,
+.interactive-section select,
+.interactive-section button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+}
+
+.interactive-section input,
+.interactive-section select {
+  background-color:black; /* Black */
+  color: #cccccc; /* Light Gray */
+}
+
+.interactive-section button {
+  background-color: #fb5607; /* Orange */
+  color: black; /* Black */
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.interactive-section button:hover {
+  background-color: black; /* Black */
+  color: #fb5607; /* Orange */
+}
+
+.interactive-section .form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.result h3 {
+  color: #fb5607; /* Orange */
+}
+
+@media (max-width: 1100px) and (min-width: 800px) {
+  .interactive-section select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 799px) {
+  .calculator-container form{
+    display: flex;
+    flex-direction: column;
+  }
+  .interactive-section select, .interactive-section input {
+    width: 100%;
+  }
+}

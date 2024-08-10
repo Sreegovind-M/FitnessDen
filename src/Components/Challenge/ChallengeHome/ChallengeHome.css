@@ -1,0 +1,139 @@
+.challenge-home-section {
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 5vh 0;
+}
+
+.challenge-home-container{
+  background-color: #cccccc; /* Light grey background */
+}
+
+.challenge-home-headers {
+  display: flex;
+  justify-content: space-between;
+  gap: 5vh;
+}
+
+.challenge-home-img img {
+  width: 100%;
+}
+
+.challenge-home-body > * {
+  margin-bottom: 20px;
+}
+
+.challenge-home-body h1 {
+  font-size: 7vh;
+  color: #303030; /* Dark grey title */
+}
+
+.challenge-home-body p {
+  font-size: 3vh;
+  color: #303030; /* Dark grey text */
+}
+
+.challenge-home-select {
+  display: flex;
+  gap: 3vh;
+}
+
+.challenge-home-pricing del {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.challenge-home-pricing {
+  display: flex;
+  gap: 2vh;
+  align-items: center;
+}
+
+.challenge-home-body button {
+  background-color: #fb5607; /* Orange background */
+  color: white; /* White text */
+  outline: 0;
+  border: 1px solid #303030; /* Dark grey border */
+  border-radius: 100px;
+  padding: 2vh 4vh;
+  font-weight: 700;
+  font-size: 2vh;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.challenge-home-body button:hover {
+  background-color: #303030; /* Dark grey background on hover */
+  color: #fb5607; /* Orange text on hover */
+}
+
+.challenge-home-ins {
+  display: flex;
+  align-items: center;
+  gap: 3vh;
+}
+
+.challenge-home-ins-body {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.challenge-home-ins img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+/* Social media links */
+
+.challenge-home-soc {
+  padding: 2vh 0;
+}
+
+.challenge-home-soc h2 {
+  margin-bottom: 10px;
+  color: #303030; /* Dark grey section header */
+}
+
+.fa {
+  padding: 1vh 2vh;
+  font-size: 30px;
+  width: fit-content;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+@media (max-width: 1100px) {
+  .challenge-home-headers {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,89 @@
+/* .fitness-tracking-section {
+  background-color: #cccccc;
+  padding: 4vh 0;
+}
+.fitness-tracking-container {
+  margin: 0 auto;
+  max-width: 90%;
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px 4px #cccccc;
+  padding: 2vh;
+  text-transform: uppercase;
+  color: #303030;
+}
+
+.fitness-tracking-header {
+  text-align: center;
+  color: #fb5607;
+  font-size: 3vh;
+}
+
+.fitness-tracking-body {
+  display: flex;
+  gap: 3vh;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 4vh 0;
+}
+
+.fitness-tracking-col-1,
+.fitness-tracking-col-2,
+.fitness-tracking-col-3 .fitness-tracking-col-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  align-items: center;
+  text-transform: uppercase;
+  min-width: 200px;
+}
+
+.fitness-tracking-box {
+  background-color: #ffffff;
+  opacity: 0.9;
+  border-radius: 10px;
+  padding: 3vh;
+  width: 250px;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+  border: 1px solid #cccccc;
+}
+
+.fitness-tracking-box:hover {
+  background-color: #fb5607;
+  color: white;
+}
+
+.fitness-tracking-box > * {
+  margin-bottom: 10px;
+} */
+
+.fitness-tracking-section{
+  padding: 5vh 0;
+}
+
+.fitness-tracking-container{
+  margin: 0 auto;
+  max-width: 90%;
+  text-transform: uppercase;
+}
+.fitness-tracking-heading-section{
+  display: flex;
+  flex-direction: column;
+}
+.fitness-tracking-heading-section h1{
+  text-align: center;
+}
+.fitness-tracking-top-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 0;
+}
+.fitness-tracking-top-header-right{
+  display: flex;
+  align-items: center;
+  gap: 3vh;
+}

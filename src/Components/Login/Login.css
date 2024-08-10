@@ -1,0 +1,152 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.login-container {
+    background-image: url("../../assets/Images/wallpaper1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for centering the login box */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for glassy look */
+}
+
+.top-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container span {
+    color: #cccccc; /* Light Gray */
+    font-size: small;
+    display: block;
+    padding: 5px 0;
+}
+
+.top-header header {
+    color: #fb5607; /* Orange */
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-field .input {
+    height: 45px;
+    width: 100%;
+    border: 1px solid #303030; /* Dark Gray Border */
+    outline: none;
+    border-radius: 30px;
+    color: black;
+    padding-left: 42px; /* Adjusted padding for icon */
+    background: #303030;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #fb5607; /* Orange */
+    font-size: 20px; /* Adjust as needed */
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fb5607; /* Orange */
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.submit {
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    background: #fb5607; /* Orange */
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit:hover {
+    background: #e65c00; /* Darker Orange */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    color: #cccccc; /* Light Gray */
+    margin-top: 10px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    accent-color: #fb5607; /* Orange Checkbox */
+}
+
+.login-container label a {
+    color: #fb5607; /* Orange */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-container label a:hover {
+    color: #e65c00; /* Darker Orange */
+}
+
+.error {
+    color: #e65c00; /* Darker Orange for errors */
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+}

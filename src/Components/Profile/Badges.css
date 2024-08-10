@@ -1,0 +1,108 @@
+/* Badges container */
+.badges {
+  padding: 10px;
+}
+
+.badges h2 {
+  margin-bottom: 10px;
+  font-size: 20px; /* Adjusted for visibility */
+  color: #fb5607;
+}
+
+.badges ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.badges li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #f0f0f0;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.badge-icon {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.badge-info h3 {
+  margin: 0;
+  font-size: 16px; 
+  color: black;
+}
+
+.badge-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: black;
+}
+
+/* Hover effect for badges */
+.badges li:hover {
+  background-color: #fb5607; /* Change background color on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+  color: #fff; /* Change text color to white on hover */
+}
+
+.badges li:hover .badge-info h3, 
+.badges li:hover .badge-info p {
+  color: #fff; /* Ensure text inside badges also changes to white */
+}
+
+.badges li:hover .badge-icon {
+  color: #fff; /* Ensure icon inside badges changes to white */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .badges h2 {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .badges li {
+    padding: 8px;
+  }
+
+  .badge-icon {
+    font-size: 25px; /* Reduce icon size for smaller screens */
+  }
+
+  .badge-info h3 {
+    font-size: 14px; /* Reduce text size */
+  }
+
+  .badge-info p {
+    font-size: 12px; /* Reduce text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .badges h2 {
+    font-size: 16px; /* Further reduce font size for very small screens */
+  }
+
+  .badges li {
+    padding: 6px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .badge-icon {
+    font-size: 20px; /* Further reduce icon size */
+    margin-bottom: 5px; /* Add margin below icon for better spacing */
+  }
+
+  .badge-info h3 {
+    font-size: 12px; /* Further reduce text size */
+  }
+
+  .badge-info p {
+    font-size: 10px; /* Further reduce text size */
+  }
+}

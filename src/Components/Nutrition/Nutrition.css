@@ -1,0 +1,466 @@
+
+
+/* Colors */
+:root {
+  --orange: #fb5607;
+  --black: #0f0f0f;
+  --dark-gray: #303030;
+  --light-gray: #cccccc;
+}
+
+/* Page Background */
+.nutrition-page {
+  background-color: var(--black); /* Black */
+  color: var(--light-gray); /* Light Gray */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vh 0;
+}
+.logoname{
+  text-decoration: none;
+}
+
+/* Glassified Navbar */
+.navbar {
+  background: var(--dark-gray);
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--orange); /* Orange */
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px; /* Space between navigation items */
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--light-gray); /* Light Gray */
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: var(--orange); /* Orange */
+  color: var(--black); /* Black */
+}
+/* Header Section */
+.nutrition-header {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-color: var(--black); /* Black */
+  color: var(--light-gray); /* Light Gray */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.header-content {
+  max-width: 800px;
+}
+
+.header-content h1 {
+  font-size: 3em;
+  color: var(--orange); /* Orange */
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-content p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.header-content button {
+  background-color: var(--orange); /* Orange */
+  color: var(--black); /* Black */
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header-content button:hover {
+  background-color: var(--black); /* Black */
+  color: var(--orange); /* Orange */
+}
+
+/* Content Section */
+.content {
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Introduction to Nutrition Section */
+.intro-nutrition {
+  background-color: var(--black); /* Black */
+  padding: 40px 20px;
+  color: var(--light-gray); /* Light Gray */
+  text-align: center;
+}
+
+.intro-nutrition h2 {
+  font-size: 2.5em;
+  color: var(--orange); /* Orange */
+  margin-bottom: 20px;
+}
+
+.intro-nutrition p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.intro-nutrition strong {
+  color: var(--orange); /* Orange */
+}
+
+/* Meal Plans Section */
+.meal-plans {
+  background-color: var(--black); /* Black */
+  padding: 40px 20px;
+  color: var(--light-gray); /* Light Gray */
+  text-align: center;
+}
+
+.meal-plans h2 {
+  font-size: 2.5em;
+  color: var(--orange); /* Orange */
+  margin-bottom: 20px;
+}
+
+.meal-plans p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.meal-plans-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* To handle responsive layout */
+}
+
+.meal-plan {
+  background-color: var(--dark-gray); /* Dark Gray */
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+}
+
+.meal-plan h3 {
+  font-size: 1.8em;
+  color: var(--orange); /* Orange */
+  margin-bottom: 10px;
+}
+
+.meal-plan p {
+  font-size: 1.1em;
+}
+
+.meal-plan:hover{
+  transform: scale(1.1);
+}
+
+.button-link {
+  display: inline-block;
+  background-color: var(--orange); /* Orange */
+  color: var(--black); /* Black */
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-link:hover {
+  background-color: var(--black); /* Black */
+  color: var(--orange); /* Orange */
+}
+
+/* Expert Tips Section */
+.expert-tips {
+  background-color: var(--black); /* Black */
+  padding: 40px 20px;
+  color: var(--light-gray); /* Light Gray */
+  text-align: center;
+}
+
+.expert-tips h2 {
+  font-size: 2.5em;
+  color: var(--orange); /* Orange */
+  margin-bottom: 20px;
+}
+
+.tips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tip-card {
+  background-color: var(--dark-gray); /* Dark Gray */
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+.tip-card:hover{
+  transform: scale(1.1);
+}
+
+.tip-card img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.tip-card h3 {
+  font-size: 1.8em;
+  color: var(--orange); /* Orange */
+  margin-bottom: 10px;
+}
+
+.tip-card p {
+  font-size: 1.1em;
+}
+
+/* Interactive Section - Calorie Calculator */
+.interactive-section {
+  padding: 40px 20px;
+  color: var(--light-gray); /* Light Gray */
+  text-align: center;
+}
+
+.interactive-section h2 {
+  font-size: 2.5em;
+  color: var(--orange); /* Orange */
+  margin-bottom: 20px;
+}
+
+.interactive-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: var(--light-gray);
+}
+
+.interactive-section .calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interactive-section form {
+  background-color: var(--dark-gray); /* Dark Gray */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.interactive-section input,
+.interactive-section select,
+.interactive-section button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.interactive-section input,
+.interactive-section select {
+  background-color: var(--black); /* Black */
+  color: var(--light-gray); /* Light Gray */
+  width: 100%;
+  margin-top: 10px;
+}
+
+.interactive-section button {
+  background-color: var(--orange); /* Orange */
+  color: var(--black); /* Black */
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.interactive-section button:hover {
+  background-color: var(--black); /* Black */
+  color: var(--orange); /* Orange */
+}
+
+.interactive-section .form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.result h3 {
+  color: var(--orange); /* Orange */
+}
+
+/* Success Stories Section */
+.success-stories {
+  background-color: var(--black); /* Black */
+  padding: 40px 20px;
+  color: var(--light-gray); /* Light Gray */
+  text-align: center;
+}
+
+.success-stories h2 {
+  font-size: 2.5em;
+  color: var(--orange); /* Orange */
+  margin-bottom: 20px;
+}
+
+.stories-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.story-card {
+  background-color: var(--dark-gray); /* Dark Gray */
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+.story-card:hover{
+  transform: scale(1.1);
+}
+
+.story-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.story-card h3 {
+  font-size: 1.8em;
+  color: var(--orange); /* Orange */
+  margin-bottom: 10px;
+}
+
+.story-card p {
+  font-size: 1.1em;
+}
+
+.meal-plan,
+.tip-card,.story-card {
+  transition: transform 0.3s ease;
+}
+.footer-container{
+  background-color: #0f0f0f;
+  width: 100%;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container{
+    background-color: #0f0f0f;
+    width: 100%;
+  }
+  .story-card,
+  .meal-plan,
+  .navbar {
+    max-width: 90%;
+  }
+  
+  .interactive-section .form-buttons {
+    flex-direction: column;
+  }
+
+  .nutrition-page {
+    width: 100%;
+    /* padding: 20px; */
+  }
+  
+  .interactive-section form {
+    width: fit-content;
+  }
+
+  .navbar {
+    align-items: flex-start;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links.show-menu {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 15px 20px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container{
+    background-color: #0f0f0f;
+    width: 100%;
+  }
+  .header-content h1 {
+    font-size: 2em;
+  }
+
+  .header-content p {
+    font-size: 1em;
+  }
+
+  .header-content button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .story-card,
+  .meal-plan {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,138 @@
+.main-challenge-section {
+  margin: 0 auto;
+  max-width: 90%;
+  background-color: #fbfbfb; 
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px 4px #cccccc; 
+  padding: 2vh;
+  text-transform: uppercase;
+  color: #303030; 
+}
+
+.main-challenge-heading{ 
+  color: #fb5607;
+  font-size: 3vh;
+  text-align: center;
+}
+
+.main-challenge-bg {
+  background-color: #cccccc; 
+  padding: 4vh 0;
+}
+
+.main-challenge-top-bar {
+  display: flex;
+  gap: 4vh;
+  padding: 2vh 0;
+}
+
+.main-challenge-top-bar div {
+  display: flex;
+  gap: 1vh;
+}
+
+.main-challenge-body {
+  display: flex;
+  gap: 3vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-challenge-col-1,
+.main-challenge-col-2,
+.main-challenge-col-3,
+.main-challenge-col-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  align-items: center;
+  text-transform: uppercase;
+  min-width: 200px;
+}
+
+.main-challenge-box {
+  background-color: #ffffff; /* White background */
+  opacity: 0.9;
+  border-radius: 10px;
+  padding: 3vh;
+  width: 250px;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+    border: 1px solid #cccccc;
+}
+
+.main-challenge-box:hover {
+  background-color: #fb5607; 
+  color: white; 
+}
+
+.main-challenge-box > * {
+  margin-bottom: 10px;
+}
+
+.workout-log-calendar > * {
+  margin-bottom: 10px;
+}
+
+.date-input {
+  border: none;
+  background: none;
+  text-align: center;
+  font-size: 1.2em;
+  color: #303030; 
+}
+
+.to-text {
+  margin: 0 1em;
+  color: #303030;
+}
+
+.weight-change-graph {
+  margin-top: 2vh;
+}
+
+.main-challenge-leaderboard {
+  background-color: #ffffff;
+  opacity: 0.9;
+  border-radius: 10px;
+  padding: 2vh;
+  width: 250px;
+  text-align: center;
+  border: 1px solid #cccccc;
+}
+
+.leaderboard-entry {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1vh;
+  padding: 1vh;
+  border-bottom: 1px solid #303030; 
+}
+
+.leaderboard-entry:last-child {
+  border-bottom: none;
+}
+
+.leaderboard-entry span {
+  font-size: 1.2em;
+  color: #303030;
+}
+
+@media (max-width: 500px) {
+  .main-challenge-box {
+    width: 100%;
+  }
+  .main-challenge-body {
+    display: block;
+  }
+  .weight-change-graph, .workout-log-calendar {
+    text-align: center;
+  }
+  .main-challenge-col-1, .main-challenge-col-2 {
+    margin-bottom: 20px;
+  }
+  .main-challenge-section {
+    overflow-y: hidden;
+  }
+}
