@@ -24,6 +24,9 @@ const Workout = () => {
 
   return (
     <div className="workout-section">
+      <div className="workout-header">
+        <h1>All Workout List</h1>
+      </div>
       {workouts.map((workout, index) => (
         <Accordion key={index} defaultExpanded={index == 0}>
           <AccordionSummary

@@ -1,0 +1,67 @@
+.challenge-management-section{
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 7vh 0;
+}
+.challenge-management-container{
+    background-color: black;
+}
+
+.challenge-management-header{
+    color: #fb5607;
+    text-align: center;
+    padding-bottom: 3vh;
+    text-transform: uppercase;
+}
+
+.challenge-management-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.challenge-management-box-section{
+    display: flex;
+    gap: 3vh;
+}
+
+.challenge-management-card {
+    border: 1px solid #fb5607;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    background-color: #cccccc;
+  }
+  
+  .challenge-management-card:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+  
+  .challenge-management-card-content {
+    padding: 20px;
+  }
+  
+  .challenge-management-card-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .challenge-mangement-card-content h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #fb5607;
+  }
+  
+  .challenge-management-card-content p {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+  }
+  

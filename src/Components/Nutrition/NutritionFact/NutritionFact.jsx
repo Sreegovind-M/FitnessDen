@@ -6,8 +6,10 @@ import Carrot from '../../../assets/Images/carrot.jpg';
 import Spinach from '../../../assets/Images/spinach.jpg';
 import Salmon from '../../../assets/Images/salmon.jpg';
 import Almonds from '../../../assets/Images/almonds.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const NutritionFact = () => {
+  const navigate = useNavigate();
 
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -58,9 +60,19 @@ const NutritionFact = () => {
     item.title.toLowerCase().includes(searchQuery)
   );
 
+  const toNurition = () => navigate("/nutrition");
+  const toRecipe = () => navigate("/recipe");
+  const toNutritionFact = () => navigate("/nutritionfact");
+
   return (
     <div className="nutrition-fact">
-      
+      <ul className={`nav-links ${isMenuOpen ? "show-menu" : ""}`}>
+        <li onClick={toNurition}><a>Home</a></li>
+        <li onClick={toRecipe}><a>Recipes</a></li>
+        <li onClick={toNutritionFact}><a>Nutritional Facts</a></li>
+      </ul>
+
+
       <header className="header">
         <h1>Nutrition Facts</h1>
       </header>

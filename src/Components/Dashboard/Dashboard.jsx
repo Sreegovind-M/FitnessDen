@@ -10,6 +10,13 @@ const Dashboard = () => {
     navi("/fitnessTracking");
   };
 
+  const toCm = () => {
+    navi("/challengemanagement");
+  }
+  const toFeedback = () => {
+    navi("/feedback");
+  }
+
   const dashboardItems = [
     {
       ani: "https://lottie.host/embed/79f776f6-824d-4c6d-9f45-cc7f4f8c24b7/6L5OaG3xLG.json",
@@ -20,17 +27,17 @@ const Dashboard = () => {
 
     },
     {
+      ani: "https://lottie.host/embed/fecf4af3-d1a8-49ce-a66c-fb3c339253cf/lERDRltVCM.json",
+      head: "Challenge Management",
+      descrip:
+      "Easily join, create, and manage fitness challenges to stay motivated and compete with friends or the community.",
+      reverse: true,
+    },
+    {
       ani: "https://lottie.host/embed/94151d94-ac50-4824-a2f2-2e9118cd3ad3/Fb922stZGP.json",
       head: "Activity Summary",
       descrip:
         "Get a quick overview of your daily, weekly, and monthly activities to track your fitness journey and achievements.",
-      reverse: true,
-    },
-    {
-      ani: "https://lottie.host/embed/fecf4af3-d1a8-49ce-a66c-fb3c339253cf/lERDRltVCM.json",
-      head: "Challenge Management",
-      descrip:
-        "Easily join, create, and manage fitness challenges to stay motivated and compete with friends or the community.",
       reverse: false,
     },
     {
@@ -91,7 +98,7 @@ const Dashboard = () => {
                   <div className="dashboard-box-descrip">
                     <h1>{items.head}</h1>
                     <p>{items.descrip}</p>
-                    <button onClick={index == 0 ? toFt : ""}>Go to {items.head}</button>
+                    <button onClick={index == 0 ? toFt : "" || index == 1 ? toCm : "" || index == 4 ? toFeedback : ""}>Go to {items.head}</button>
                   </div>
                 </div>
               ))}

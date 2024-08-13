@@ -6,14 +6,18 @@
 }
 
 .nutrition-fact {
-  font-family: Arial, sans-serif;
   color: var(--light-gray);
   background-color: var(--black);
   overflow-x: hidden;
 }
 
+.nav-links{
+  margin-top: 50px;
+}
+
+
 .header {
-  background-color: var(--dark-gray);
+  /* background-color: var(--dark-gray); */
   color: var(--orange);
   text-align: center;
   padding: 20px;

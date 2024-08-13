@@ -1,6 +1,6 @@
 .shopping-page {
   padding: 20px;
-  background-color: white; /* Set background color to white */
+  background-color: #0f0f0f;
 }
 
 .shopping-header {
@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #f5f5f5; /* Light gray background for header */
+  background-color: #0f0f0f; /* Light gray background for header */
   border-bottom: 1px solid #cccccc; /* Light gray border */
 }
 
@@ -82,6 +82,13 @@
   padding: 10px;
   border: 1px solid #cccccc; /* Light gray border */
   border-radius: 4px;
+}
+
+.products h2{
+  color: #cccccc;
+}
+.filters h2{
+  color: #cccccc;
 }
 
 /* Products Section */

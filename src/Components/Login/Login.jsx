@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.css";
 import { FaUser, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -16,42 +17,30 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    let emailError = "";
-    let passwordError = "";
 
-    if (!email) {
-      emailError = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      emailError = "Email address is invalid";
-    }
+    try {
+      const response = axios.get("http://localhost:3001/login");
+      const signData = (await response).data;
 
-    if (!password) {
-      passwordError = "Password is required";
-    } else if (password.length < 8) {
-      passwordError = "Password must be at least 8 characters long";
-    } else if (
-      !/[A-Z]/.test(password) ||
-      !/[a-z]/.test(password) ||
-      !/[0-9]/.test(password)
-    ) {
-      passwordError =
-        "Password must contain upper, lower case letters and a number";
-    }
+      const checkValidation = signData.find(
+        (checkValidation) =>
+          checkValidation.email === email &&
+          checkValidation.password === password
+      );
 
-    if (emailError || passwordError) {
-      setErrors({ email: emailError, password: passwordError });
-    } else {
-      setErrors({ email: "", password: "" });
-      // Handle login logic here
-      try {
-        // Example: await login(email, password);
-        console.log("Login successful");
-      } catch (error) {
-        console.error("Login failed", error);
-        // Handle error (e.g., show a message to the user)
+      if (checkValidation) {
+        alert("signed in");
+        navi("/profile");
+      } else {
+        alert("failed login");
       }
+    } catch (error) {
+      console.error(error);
     }
-    navi("/");
+  };
+
+  const toSign = () => {
+    navi("/signup");
   };
 
   return (
@@ -59,7 +48,7 @@ const Login = () => {
       <div className="box">
         <div className="container">
           <div className="top-header">
-            <span>Have an account?</span>
+            <span>Don't have an account?</span>
             <header>Login</header>
           </div>
           <form className="login-form" onSubmit={handleSubmit}>
@@ -101,13 +90,7 @@ const Login = () => {
             </div>
             <div className="bottom">
               <div className="left">
-                <input type="checkbox" id="check" />
-                <label htmlFor="check"> Remember Me</label>
-              </div>
-              <div className="right">
-                <label>
-                  <a href="#">Forgot password?</a>
-                </label>
+                <a onClick={toSign}>Sign Up</a>
               </div>
             </div>
           </form>

@@ -19,18 +19,18 @@ const Home = () => {
         <div className="hero-section-body">
           <div className="hero-title">
             <h1>It's Not fitness.</h1>
-            <motion.div
+            {/* <motion.div
               initial={{ width: 0 }}
-              animate={{ width: "100%" }}
+              animate={{ width: "35%" }}
               transition={{ duration: 6, ease: "easeInOut" }}
               style={{
                 position: "absolute",
-                left: 0,
+                left: "67vh",
                 top: "9%",
                 height: "7px",
                 backgroundColor: "black",
               }}
-            />
+            /> */}
             <br />
             <h1>
               <span>It's Life.</span>

@@ -60,30 +60,151 @@
   margin-bottom: 10px;
 } */
 
-.fitness-tracking-section{
+.fitness-tracking-section {
   padding: 5vh 0;
 }
 
-.fitness-tracking-container{
+.fitness-tracking-container {
   margin: 0 auto;
   max-width: 90%;
   text-transform: uppercase;
 }
-.fitness-tracking-heading-section{
+.fitness-tracking-heading-section {
   display: flex;
   flex-direction: column;
 }
-.fitness-tracking-heading-section h1{
+.fitness-tracking-heading-section h1 {
   text-align: center;
 }
-.fitness-tracking-top-header{
+.fitness-tracking-top-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2vh 0;
 }
-.fitness-tracking-top-header-right{
+.fitness-tracking-top-header-right {
   display: flex;
   align-items: center;
   gap: 3vh;
+}
+
+.fitness-tracking-first-box-section {
+  display: flex;
+  gap: 2vh;
+  padding: 3vh 0;
+  flex-wrap: wrap;
+}
+
+.fitness-tracking-box {
+  width: fit-content;
+  padding: 2vh;
+  color: #1a1a1a;
+  transition: all 0.5s;
+  cursor: pointer;
+  width: 250px;
+  height: fit-content;
+}
+.box-1 {
+  background-color: #eaf0e0;
+}
+.box-2 {
+  background-color: #e9f1f7;
+}
+.box-3 {
+  background-color: #f8f8f8;
+}
+.box-4 {
+  background-color: #cbe6fd;
+}
+.fitness-tracking-box > * {
+  margin-bottom: 3vh;
+}
+.fitness-tracking-box > *:last-child {
+  margin-bottom: 0;
+}
+
+.fitness-tracking-box-top-img {
+  display: flex;
+  justify-content: space-between;
+}
+.ftb-top-img-left {
+  background-color: white;
+  padding: 5px;
+}
+.ftb-top-img-right {
+  padding: 5px;
+}
+
+.fitness-tracking-box:hover {
+  transform: scale(1.05);
+}
+.fitness-tracking-right-box-section {
+  margin-left: 55px;
+  display: flex;
+  gap: 2vh;
+  padding: 3vh 0;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.ftb-right-box {
+  background-color: #f8f8f8;
+  padding: 1vh;
+  color: #1a1a1a;
+  transition: all 0.5s;
+  cursor: pointer;
+  text-align: center;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.ftb-right-box:hover {
+  transform: scale(1.05);
+}
+
+.boxr1 {
+  background-color: #eaf0e0;
+}
+
+.boxr2 {
+  background-color: #e9f1f7;
+}
+
+.boxr3 {
+  background-color: #cbe6fd;
+}
+
+.fitness-tracking-second-box-section {
+  display: flex;
+  gap: 3vh;
+  padding: 3vh 0;
+  justify-content: space-evenly;
+}
+
+.fitness-tracking-second-left-box-section {
+  display: flex;
+  align-items: center;
+  gap: 4vh;
+}
+
+.ftsl-calorie-box {
+  display: flex;
+  gap: 2vh;
+  align-items: center;
+}
+.ftsl-calorie-descrip > * {
+  margin-bottom: 8px;
+}
+
+.fts-nav-top {
+  padding: 3vh;
+  background-color: #e9f1f7;
+  margin-bottom: 10px;
+  margin-left: 8vh;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.fts-nav-top:hover {
+  transform: scale(1.05);
 }

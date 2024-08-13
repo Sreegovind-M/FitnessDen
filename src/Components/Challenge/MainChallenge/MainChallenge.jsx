@@ -8,15 +8,12 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
 import { LineChart } from "@mui/x-charts/LineChart";
-import { createTheme } from '@mui/material/styles';
-
+import { createTheme } from "@mui/material/styles";
+import { MyContext } from "../../DetailsContext/MyContext";
+import { useContext } from "react";
 
 const MainChallenge = () => {
-  const location = useLocation();
-  const { title, level } = location.state;
-
   const [coins, setCoins] = useState(0);
-  const [weight, setWeight] = useState(0);
   const [calorie, setCalorie] = useState(0);
 
   const [value, setValue] = useState([
@@ -32,16 +29,15 @@ const MainChallenge = () => {
     { name: "User 5", score: 85 },
   ];
 
+  const { profileName, age, email, height, weight } = useContext(MyContext); // Access the context
+
+  const location = useLocation();
+  const { title, level } = location.state;
+
   const navi = useNavigate();
-  const toWorkout = () => {
-    navi("/workout");
-  }
-  const toAllWorkout = () => {
-    navi("/allWorkouts");
-  }
-  const toDiet = () => {
-    navi("/recipe");
-  }
+  const toWorkout = () => navi("/workout");
+  const toAllWorkout = () => navi("/allWorkouts");
+  const toDiet = () => navi("/recipe");
 
   return (
     <div className="main-challenge-bg">
@@ -53,7 +49,7 @@ const MainChallenge = () => {
           <div className="main-challenge-top-bar">
             <div>
               <img src={prof} alt="Profile" height={28} width={28} />
-              <h3>Profile</h3>
+              <h3>{profileName}</h3>
             </div>
             <div>
               <h3>{level}</h3>
@@ -78,7 +74,7 @@ const MainChallenge = () => {
           </div>
           <div className="main-challenge-col-2">
             <div className="main-challenge-box">
-              <h2>Body Fat: {weight} %</h2>
+              <h2>Body Fat: {weight / 5} %</h2>
             </div>
             <div className="main-challenge-box">
               <h2>Calories Burnt: {calorie}</h2>

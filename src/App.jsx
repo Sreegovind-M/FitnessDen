@@ -20,36 +20,47 @@ import NutritionFact from "./Components/Nutrition/NutritionFact/NutritionFact";
 import Recipe from "./Components/Nutrition/Recipe/Recipe";
 import Profile from "./Components/Profile/Profile";
 import SignUp from "./Components/SignUp/SignUp";
+import { MyContextProvider } from "./Components/DetailsContext/MyContext";
+import ChallengeManagement from "./Components/Dashboard/ChallengeManagement/ChallengeManagement";
+import Feedback from "./Components/Dashboard/Feedback/Feedback";
 
 const AppContent = () => {
   const location = useLocation();
 
   const isLoginPage = location.pathname === "/login";
+  const isSignUpPage = location.pathname === "/signup";
 
   return (
     <div>
-      {!isLoginPage && <NavBar />}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/challenge" element={<Challenge />} />
-        <Route path="/challengeHome" element={<ChallengeHome />} />
-        <Route path="/mainChallenge" element={<MainChallenge />} />
-        <Route path="/workout" element={<Workout />} />
-        <Route path="/allWorkouts" element={<AllWorkout />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/fitnessTracking" element={<FitnessTracking />} />
-        <Route path="/personalTraining" element={<PersonalTraining />} />
-        <Route path="/shopsHome" element={<ShopsHome />} />
-        <Route path="/allProducts" element={<AllProducts />} />
-        <Route path="/cartPage" element={<CartPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/nutrition" element={<Nutrition/>}></Route>
-        <Route path="/nutritionfact" element={<NutritionFact/>}></Route>
-        <Route path="/recipe" element={<Recipe />}></Route>
-        <Route path="/profile" element={<Profile/>}></Route>
-        <Route path="/signup" element={<SignUp/>}></Route>
-      </Routes>
-      {!isLoginPage && <Footer />}
+      <MyContextProvider>
+        {!isLoginPage && !isSignUpPage && <NavBar />}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/challenge" element={<Challenge />} />
+          <Route path="/challengeHome" element={<ChallengeHome />} />
+          <Route path="/mainChallenge" element={<MainChallenge />} />
+          <Route path="/workout" element={<Workout />} />
+          <Route path="/allWorkouts" element={<AllWorkout />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/fitnessTracking" element={<FitnessTracking />} />
+          <Route path="/personalTraining" element={<PersonalTraining />} />
+          <Route path="/shopsHome" element={<ShopsHome />} />
+          <Route path="/allProducts" element={<AllProducts />} />
+          <Route path="/cartPage" element={<CartPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/nutrition" element={<Nutrition />}></Route>
+          <Route path="/nutritionfact" element={<NutritionFact />}></Route>
+          <Route path="/recipe" element={<Recipe />}></Route>
+          <Route path="/profile" element={<Profile />}></Route>
+          <Route path="/signup" element={<SignUp />}></Route>
+          <Route
+            path="/challengemanagement"
+            element={<ChallengeManagement />}
+          ></Route>
+          <Route path="/feedback" element={<Feedback/>}></Route>
+        </Routes>
+        {!isLoginPage && !isSignUpPage && <Footer />}
+      </MyContextProvider>
     </div>
   );
 };

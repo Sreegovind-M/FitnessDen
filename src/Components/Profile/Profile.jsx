@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ProfImg from "../../assets/Images/Profile_Training.jpg";
 import "../Profile/Profile.css";
-import Badges from "./Badges";
-import coins from "../../assets/Images/coins.png"
+import coins from "../../assets/Images/coins.png";
+import { MyContext } from "../DetailsContext/MyContext";
+
+const badges = [
+  { id: 1, name: "Streak Master", description: "5 Days Fire Streak" },
+  { id: 2, name: "Champion", description: "Top of the Leaderboard" },
+  { id: 3, name: "Consistent", description: "30 Days Logged In" },
+];
 
 const Profile = () => {
-  const [formData, setFormData] = useState({
-    name: "",
+  const { setProfileDetails } = useContext(MyContext);
+
+  const [profileData, setProfileData] = useState({
+    profileName: "",
     age: "",
-    phone: "",
     email: "",
     height: "",
     weight: "",
   });
-
-  const [streaks, setStreaks] = useState(Array(31).fill(false));
-  const [badges, setBadges] = useState([
-    "Beginner",
-    "Intermediate",
-    "Advanced",
-  ]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -27,41 +27,59 @@ const Profile = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setProfileData({
+      ...profileData,
       [name]: value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Updated data:", formData);
+    setProfileDetails(profileData);
   };
 
   const handleReset = () => {
-    setFormData({
-      name: "",
+    setProfileData({
+      profileName: "",
       age: "",
-      phone: "",
       email: "",
       height: "",
       weight: "",
     });
   };
-
+  const [streaks, setStreaks] = useState(Array(31).fill(false));
   const toggleStreak = (index) => {
     const newStreaks = [...streaks];
     newStreaks[index] = !newStreaks[index];
     setStreaks(newStreaks);
   };
+
   const [coinss, setCoinss] = useState(0);
+
+  const currentDate = new Date();
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const currentMonth = monthNames[currentDate.getMonth()];
+  const currentYear = currentDate.getFullYear();
 
   return (
     <div className="profile-container">
       <div className="profile-nav">
         <h1>Public Profile</h1>
         <div className="combo-sea-db">
-          <img src={coins} alt="" height={33} width={33}/>
+          <img src={coins} alt="" height={33} width={33} />
           <h2>{coinss} coins</h2>
         </div>
       </div>
@@ -78,14 +96,14 @@ const Profile = () => {
               <div className="form__group field">
                 <input
                   type="text"
-                  name="name"
+                  name="profileName"
                   className="form__field"
                   placeholder="Name"
-                  value={formData.name}
+                  value={profileData.profileName}
                   onChange={handleChange}
                   required
                 />
-                <label htmlFor="name" className="form__label">
+                <label htmlFor="profileName" className="form__label">
                   Name
                 </label>
               </div>
@@ -95,7 +113,7 @@ const Profile = () => {
                   name="age"
                   className="form__field"
                   placeholder="Age"
-                  value={formData.age}
+                  value={profileData.age}
                   onChange={handleChange}
                   required
                 />
@@ -105,25 +123,11 @@ const Profile = () => {
               </div>
               <div className="form__group field">
                 <input
-                  type="tel"
-                  name="phone"
-                  className="form__field"
-                  placeholder="Phone No."
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                />
-                <label htmlFor="phone" className="form__label">
-                  Phone No.
-                </label>
-              </div>
-              <div className="form__group field">
-                <input
                   type="email"
                   name="email"
                   className="form__field"
                   placeholder="Email"
-                  value={formData.email}
+                  value={profileData.email}
                   onChange={handleChange}
                   required
                 />
@@ -137,7 +141,7 @@ const Profile = () => {
                   name="height"
                   className="form__field"
                   placeholder="Height(cm)"
-                  value={formData.height}
+                  value={profileData.height}
                   onChange={handleChange}
                   required
                 />
@@ -151,7 +155,7 @@ const Profile = () => {
                   name="weight"
                   className="form__field"
                   placeholder="Weight(kg)"
-                  value={formData.weight}
+                  value={profileData.weight}
                   onChange={handleChange}
                   required
                 />
@@ -181,7 +185,9 @@ const Profile = () => {
         </div>
         <div className="c2">
           <div className="calendar">
-            <h2>August 2024</h2>
+            <h2>
+              {currentMonth} {currentYear}
+            </h2>
             <br />
             <div className="calendar-grid">
               {Array.from({ length: 31 }, (_, i) => (
@@ -196,7 +202,21 @@ const Profile = () => {
               ))}
             </div>
           </div>
-          <Badges />
+
+          <div className="badges">
+            <h2>Badges & Achievements</h2>
+            <ul>
+              {badges.map((badge) => (
+                <li key={badge.id}>
+                  <div className="badge-icon">🏆</div>
+                  <div className="badge-info">
+                    <h3>{badge.name}</h3>
+                    <p>{badge.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className="c3">
           <h3>Leaderboard</h3>

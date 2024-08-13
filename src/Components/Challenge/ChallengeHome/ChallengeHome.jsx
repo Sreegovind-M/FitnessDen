@@ -7,6 +7,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import axios from "axios";
 
 const ChallengeHome = () => {
   const location = useLocation();
@@ -16,7 +17,20 @@ const ChallengeHome = () => {
   const [level, setLevel] = React.useState("");
 
   const handleClick = () => {
-    navigate("/mainChallenge", { state: { title: challenge.title, level } });
+    axios({
+      method: "put",
+      url: `http://localhost:3001/api/${challenge._id}`,
+      data: {
+        isJoin: true,
+      },
+    })
+      .then((res) => {
+        // Navigate to mainChallenge after the update is successful
+        navigate("/mainChallenge", { state: { title: challenge.title, level } });
+      })
+      .catch((err) => {
+        console.error("Error updating challenge:", err);
+      });
   };
 
   const handleChange = (event) => {
@@ -32,11 +46,11 @@ const ChallengeHome = () => {
       <div className="challenge-home-section">
         <div className="challenge-home-headers">
           <div className="challenge-home-img">
-            <img src={challenge.img} alt="no" />
+            <img src={challenge.image} alt="Challenge" />
           </div>
           <div className="challenge-home-body">
             <h1>{challenge.title}</h1>
-            <p>{challenge.descrip}</p>
+            <p>{challenge.description}</p>
             <div className="challenge-home-pricing">
               <p>Price:</p>
               <del>
@@ -45,7 +59,9 @@ const ChallengeHome = () => {
               <h2>FREE</h2>
             </div>
             <div className="challenge-home-select">
-              <button onClick={handleClick}>Join</button>
+              <button onClick={handleClick}>
+                {challenge.isJoin ? "Joined" : "Join"}
+              </button>
               <Box sx={{ minWidth: 150 }}>
                 <FormControl fullWidth>
                   <InputLabel
@@ -75,19 +91,19 @@ const ChallengeHome = () => {
               </Box>
             </div>
             <div className="challenge-home-ins">
-              <p>Instructor: </p>
+              <p>Instructor:</p>
               <div className="challenge-home-ins-body">
                 <p>Hany Rambod</p>
-                <img src={coach} alt="" />
+                <img src={coach} alt="Instructor" />
               </div>
             </div>
             <div className="challenge-home-soc">
-              <h2>Share your challenge on: </h2>
+              <h2>Share your challenge on:</h2>
               <div className="challenge-home-soc-link">
-                <a href="www.facebook.com" className="fa fa-facebook"></a>
-                <a href="www.instagram.com" className="fa fa-instagram"></a>
-                <a href="www.twitter.com" className="fa fa-twitter"></a>
-                <a href="www.snapchat.com" className="fa fa-snapchat-ghost"></a>
+                <a href="https://www.facebook.com" className="fa fa-facebook" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://www.instagram.com" className="fa fa-instagram" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://www.twitter.com" className="fa fa-twitter" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://www.snapchat.com" className="fa fa-snapchat-ghost" target="_blank" rel="noopener noreferrer"></a>
               </div>
             </div>
           </div>
