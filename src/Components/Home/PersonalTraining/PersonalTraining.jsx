@@ -1,8 +1,15 @@
 import React from "react";
 import "../PersonalTraining/PersonalTraining.css";
 import ptBg from "../../../assets/Images/img-clip.svg";
+import { useNavigate } from "react-router-dom";
 
 const PersonalTraining = () => {
+
+  const navi = useNavigate();
+  const toPayment = () => {
+    navi("/payment")
+  }
+
   return (
     <div>
       <div className="pt-section">
@@ -30,7 +37,7 @@ const PersonalTraining = () => {
                   <h1>
                     50$/ <span>month</span>
                   </h1>
-                  <button>buy[+]</button>
+                  <button onClick={toPayment}>buy[+]</button>
                 </div>
               </div>
             </div>
@@ -53,7 +60,7 @@ const PersonalTraining = () => {
                   <h1>
                     90$/ <span>month</span>
                   </h1>
-                  <button>buy[+]</button>
+                  <button onClick={toPayment}>buy[+]</button>
                 </div>
               </div>
             </div>
@@ -76,7 +83,7 @@ const PersonalTraining = () => {
                   <h1>
                     120$/ <span>month</span>
                   </h1>
-                  <button>buy[+]</button>
+                  <button onClick={toPayment}>buy[+]</button>
                 </div>
               </div>
             </div>
@@ -100,7 +107,7 @@ const PersonalTraining = () => {
                   <h1>
                     150$/ <span>month</span>
                   </h1>
-                  <button>buy[+]</button>
+                  <button onClick={toPayment}>buy[+]</button>
                 </div>
               </div>
             </div>
