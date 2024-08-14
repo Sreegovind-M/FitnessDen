@@ -1,5 +1,7 @@
 import React from "react";
 import "../AllProducts/AllProducts.css";
+import { useNavigate } from "react-router-dom";
+
 
 const CartOverlay = ({ cartItems, onRemove, onClose }) => (
   <div className="cart-overlay">

@@ -1,6 +1,6 @@
 /* Navigation Bar */
 
-.navbar-tot{
+.navbar-tot {
   background-color: black;
 }
 
@@ -11,7 +11,8 @@
   color: white;
 }
 
-.navigation-head img, .navigation-head-res img {
+.navigation-head img,
+.navigation-head-res img {
   width: 100%;
   height: 4vh;
   cursor: pointer;
@@ -63,7 +64,7 @@
 .navigation-profile img {
   cursor: pointer;
 }
-.nav-menu-bar{
+.nav-menu-bar {
   display: none;
 }
 
@@ -73,7 +74,7 @@
   display: none;
 }
 
-.navigation-responsive-body{
+.navigation-responsive-body {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -87,21 +88,21 @@
   transition: all 0.5s;
   width: 200px;
 }
-.navigation-profile-res img:first-child{
+.navigation-profile-res img:first-child {
   margin-right: 20px;
 }
 
-.navigation-profile-res{
+.navigation-profile-res {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.navigation-responsive-body-close{
+.navigation-responsive-body-close {
   display: none;
 }
 
-.navigation-elements-res ul{
+.navigation-elements-res ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -111,7 +112,7 @@
   list-style-type: none;
   text-decoration: none;
 }
-.navigation-profile-res{
+.navigation-profile-res {
   margin-bottom: 25px;
 }
 
@@ -119,13 +120,13 @@
   .navigation-elements {
     display: none;
   }
-  .navigation-responsive-body, .nav-menu-bar{
+  .navigation-responsive-body,
+  .nav-menu-bar {
     display: block;
   }
-  .navigation-profile{
+  .navigation-profile {
     display: none;
   }
-
 }
 
 @media (max-width: 599px) {
@@ -133,10 +134,11 @@
   .navigation-elements {
     display: none;
   }
-  .navigation-responsive-body, .nav-menu-bar{
+  .navigation-responsive-body,
+  .nav-menu-bar {
     display: block;
   }
-  .navigation-profile{
+  .navigation-profile {
     display: none;
   }
 }

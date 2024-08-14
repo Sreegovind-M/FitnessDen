@@ -23,6 +23,8 @@
 .challenge-management-box-section{
     display: flex;
     gap: 3vh;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .challenge-management-card {

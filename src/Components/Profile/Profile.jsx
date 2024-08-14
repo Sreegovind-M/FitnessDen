@@ -3,6 +3,7 @@ import ProfImg from "../../assets/Images/Profile_Training.jpg";
 import "../Profile/Profile.css";
 import coins from "../../assets/Images/coins.png";
 import { MyContext } from "../DetailsContext/MyContext";
+import { useNavigate } from "react-router-dom";
 
 const badges = [
   { id: 1, name: "Streak Master", description: "5 Days Fire Streak" },
@@ -74,6 +75,11 @@ const Profile = () => {
   const currentMonth = monthNames[currentDate.getMonth()];
   const currentYear = currentDate.getFullYear();
 
+  const navi = useNavigate();
+
+  const toDashboard = () => {
+    navi("/dashboard");
+  }
   return (
     <div className="profile-container">
       <div className="profile-nav">
@@ -176,7 +182,7 @@ const Profile = () => {
                 </button>
               </div>
               <div className="go-to-dashboard">
-                <a href="/dashboard" className="dashboard-link">
+                <a onClick={toDashboard} className="dashboard-link">
                   Go to Dashboard
                 </a>
               </div>

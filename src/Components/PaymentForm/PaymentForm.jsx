@@ -47,7 +47,7 @@ const PaymentForm = () => {
         <div className="form-section payment-details">
           <h2>Payment</h2>
           <label>Cards Accepted:</label>
-          <div className="card-icons">
+          <div className="payment-card-icons">
             <img src={paypal} alt="PayPal" />
             <img src={mastercard} alt="MasterCard" />
             <img src={visa} alt="Visa" />
@@ -59,7 +59,7 @@ const PaymentForm = () => {
 
           <label>Credit Card Number:</label>
           <input
-            type="text"
+            type="number"
             name="cardnumber"
             placeholder="1111 2222 3333 4444"
           />

@@ -41,7 +41,7 @@
 
 .paymnt-form label {
     font-weight: bold;
-    margin-bottom: 5px; /* Add margin to align labels better */
+    margin-bottom: 5px; 
 }
 
 .payment-form input {
@@ -49,11 +49,11 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-    margin-bottom: 10px; /* Add margin between input fields */
+    box-sizing: border-box; 
+    margin-bottom: 10px; 
 }
 
-.card-icons img {
+.payment-card-icons img {
     margin-right: 10px;
     height: 30px;
 }
@@ -99,5 +99,9 @@
 @media (max-width: 767px) {
     .payment-form {
         flex-direction: column;
+    }
+    .payment-container{
+        display: block;
+        height: 100%;
     }
 }

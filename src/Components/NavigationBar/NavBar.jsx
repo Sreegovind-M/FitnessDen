@@ -22,13 +22,13 @@ const NavBar = () => {
   };
   const toHome = () => {
     navi("/");
-  }
+  };
   return (
     <div className="navbar-tot">
       <div className="navigation-section">
         <div className="navigation-body">
           <div className="navigation-head">
-            <img src={logo} alt="no" onClick={toHome}/>
+            <img src={logo} alt="no" onClick={toHome} />
           </div>
           <div className="navigation-elements">
             <nav>
@@ -123,7 +123,7 @@ const NavBar = () => {
                 <NavLink
                   to="/"
                   style={({ isActive }) => ({
-                    color: isActive ? "#fb5607" : "white",
+                    color: isActive ? "#fb5607" : "black",
                   })}
                 >
                   Home

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Link, Route, BrowserRouter as Router, Routes, useNavigate } from "react-router-dom";
 import CartPage from "../CartPage/CartPage";
 import "../ShopsHome.css";
 import yoga from "../../../assets/Images/yoga_mat.jpeg";
@@ -427,6 +427,12 @@ const Shopping = () => {
     window.scrollTo(0, 0); 
   }, []);
 
+  const navi = useNavigate();
+
+  const toPayment = () => {
+    navi("/payment");
+  }
+
   return (
     <div className="shopping-page">
       <header className="shopping-header">
@@ -487,6 +493,7 @@ const Shopping = () => {
                   <button onClick={() => handleAddToCart(product)}>
                     Add to Cart
                   </button>
+                  <button onClick={toPayment} style={{marginLeft: "8px"}}>Buy</button>
                 </div>
               </li>
             ))}

@@ -153,4 +153,8 @@
   .challenge-bg-img img {
     height: 100%;
   }
+  .challenge-hero-section {
+    z-index: 1;
+    position: relative;
+  }
 }
