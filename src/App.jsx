@@ -23,6 +23,7 @@ import SignUp from "./Components/SignUp/SignUp";
 import { MyContextProvider } from "./Components/DetailsContext/MyContext";
 import ChallengeManagement from "./Components/Dashboard/ChallengeManagement/ChallengeManagement";
 import Feedback from "./Components/Dashboard/Feedback/Feedback";
+import PaymentForm from "./Components/PaymentForm/PaymentForm";
 
 const AppContent = () => {
   const location = useLocation();
@@ -58,6 +59,7 @@ const AppContent = () => {
             element={<ChallengeManagement />}
           ></Route>
           <Route path="/feedback" element={<Feedback/>}></Route>
+          <Route path="/payment" element={<PaymentForm/>}></Route>
         </Routes>
         {!isLoginPage && !isSignUpPage && <Footer />}
       </MyContextProvider>

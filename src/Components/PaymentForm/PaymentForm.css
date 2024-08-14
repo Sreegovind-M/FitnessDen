@@ -1,0 +1,103 @@
+.payment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #cccccc;
+}
+
+.payment-form {
+    background: rgb(244, 239, 239);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-row {
+    display: flex;
+    gap: 10px;
+}
+
+.payment-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-container h2 {
+    margin-bottom: 10px;
+}
+
+.paymnt-form label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Add margin to align labels better */
+}
+
+.payment-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    margin-bottom: 10px; /* Add margin between input fields */
+}
+
+.card-icons img {
+    margin-right: 10px;
+    height: 30px;
+}
+
+.payment-submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.payment-submit-button {
+    background-color: #fb5607;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.payment-submit-button:hover {
+    background-color: #cccccc;
+    color: black;
+}
+
+@media (min-width: 768px) {
+    .payment-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .billing-address, .payment-details {
+        width: calc(50% - 10px);
+    }
+
+    .payment-submit-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .payment-form {
+        flex-direction: column;
+    }
+}
